@@ -26,9 +26,9 @@ include_recipe 'yum'
 yum_repository 'circonus' do
   description "Circonus - Base"
   baseurl "http://updates.circonus.net/centos/6/x86_64/"
-  gpgcheck 0
+  gpgcheck false
   action :create
 end
 
-yum 'circonus-field-broker' do
+package 'circonus-field-broker' do
 end
