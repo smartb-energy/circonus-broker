@@ -1,4 +1,4 @@
 # circonus-broker
 
-TODO: Enter the cookbook description here.
+Currently tested only on CentOS 6
 
