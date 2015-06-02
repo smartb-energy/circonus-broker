@@ -1,5 +1,6 @@
 execute 'install circonus-field-broker-0.1.1431380725' do
   command 'yes | pkg_add http://updates.circonus.net/smartos/14.1/circonus-field-broker-0.1.1431380725.tgz'
+  not_if 'pkgin list | grep circonus-field-broker'
 end
 
 service 'jezebel' do
