@@ -4,6 +4,6 @@ maintainer_email ''
 license          ''
 description      'Installs/Configures the Circonus broker'
 long_description 'Installs/Configures the Circonus broker'
-version          '0.1.0'
+version          '0.2.0'
 
 depends 'yum'
