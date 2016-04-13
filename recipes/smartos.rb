@@ -1,6 +1,10 @@
-execute 'install circonus-field-broker-0.1.1431380725' do
-  command 'yes | pkg_add http://updates.circonus.net/smartos/14.1/circonus-field-broker-0.1.1431380725.tgz'
-  not_if 'pkgin list | grep circonus-field-broker'
+execute 'add circonus pkgsrc repo' do
+  command 'echo http://updates.circonus.net/smartos/14.1/ >> /opt/local/etc/pkgin/repositories.conf'
+  not_if 'grep "http://updates.circonus.net/smartos/14.1/" /opt/local/etc/pkgin/repositories.conf'
+end
+
+execute 'install circonus broker' do
+  command 'pkgin -fy update && pkgin -y install circonus-field-broker'
 end
 
 service 'jezebel' do
