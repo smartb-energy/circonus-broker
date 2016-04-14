@@ -1,8 +1,8 @@
 # circonus-broker
 
-Currently tested only on CentOS and SmartOS.  Make sure ports 80 and 43191 are not blocked so that you can configure your broker via the web UI and allow Circonus to talk to the broker.
+See `.kitchen.yml` for supported platforms.  Make sure ports 80 and 43191 are not blocked on your firewall/edge device, etc. so that you can configure your broker via the web UI and allow Circonus to talk to the broker (out.circonus.net).
 
 
-## Community Maintainers
-Arash Zandi (arash.zandi@smartb.eu)
+### Community Maintainers
 Blake Irvin (blake.irvin@smartb.eu)
+Arash Zandi (arash.zandi@smartb.eu)
