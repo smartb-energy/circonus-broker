@@ -7,7 +7,10 @@ provisioner:
 
 platforms:
   - name: centos-7.1
-  - name: omniti/omnios-r151006
+  - name: omnios-r151006
+    driver:
+      box: omnios-r151006
+      box_url: http://omnios.omniti.com/media/omnios-r151006_066.box
 
   - name: smartos-base64-14.1.0
     driver_config:
