@@ -12,14 +12,8 @@ package 'field/broker' do
   action :install
 end
 
-service 'jezebel' do
-  action :enable
-end
-
-service 'noitd' do
-  action :enable
-end
-
-service 'ntp' do
-  action :enable
+%w{jezebel noitd ntp}.each do |svc|
+  service svc do
+    action :enable
+  end
 end
