@@ -1,7 +1,7 @@
 name             'circonus-broker'
 maintainer       ''
 maintainer_email ''
-license          ''
+license          'MIT'
 description      'Installs/Configures the Circonus broker'
 long_description 'Installs/Configures the Circonus broker'
 version          '0.3.0'
