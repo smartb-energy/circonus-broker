@@ -6,7 +6,7 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: centos-7.1
+  - name: geerlingguy/centos6
   - name: omnios-r151006
     driver:
       box: omnios-r151006
