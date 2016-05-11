@@ -10,10 +10,18 @@ end
 
 package 'field/broker' do
   action :upgrade
+  notifies :reload, 'service[jezebel]', :delayed
+  notifies :reload, 'service[noitd]', :delayed
 end
 
-%w{jezebel noitd ntp}.each do |svc|
-  service svc do
-    action :enable
-  end
+service 'jezebel' do
+  action :enable
+end
+
+service 'noitd' do
+  action :enable
+end
+
+service 'ntp' do
+  action :enable
 end
