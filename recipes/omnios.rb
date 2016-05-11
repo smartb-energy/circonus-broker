@@ -1,6 +1,6 @@
 execute 'add circonus package repo' do
   command 'pkg set-publisher -g http://updates.circonus.net/omnios/ circonus'
-  not_if 'pkg publisher'
+  not_if 'pkg publisher | grep circonus'
 end
 
 execute 'create ntp.conf' do
