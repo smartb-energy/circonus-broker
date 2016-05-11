@@ -9,7 +9,7 @@ execute 'create ntp.conf' do
 end
 
 package 'field/broker' do
-  action :install
+  action :upgrade
 end
 
 %w{jezebel noitd ntp}.each do |svc|
