@@ -8,6 +8,7 @@ end
 
 describe port(43191) do
   it { should be_listening }
+  its('processes') { should include 'noitd' }
 end
 
 describe service('ntpd') do
@@ -15,6 +16,10 @@ describe service('ntpd') do
   it { should be_running }
 end
 
-describe command('/opt/napp/bin/provtool --version') do
+describe command('sudo /opt/napp/bin/provtool config get') do
   its('exit_status') { should eq 0 }
+end
+
+describe file('/lib64/libpcre.so.0') do
+  it { should exist }
 end
