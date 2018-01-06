@@ -3,25 +3,13 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_solo
+  name: chef_zero
 
 platforms:
-  - name: geerlingguy/centos6
-  - name: omnios-r151006
-    driver:
-      box: omnios-r151006
-      box_url: http://omnios.omniti.com/media/omnios-r151006_066.box
+  - name: centos-7
 
-  - name: smartos-base64-14.1.0
-    driver_config:
-      box: livinginthepast/smartos-base64
-      box_url: https://atlas.hashicorp.com/livinginthepast/boxes/smartos-base64
-      vagrantfile_erb: test/templates/Vagrantfile.smartos.erb
-      zone:
-        name: base64
-        image: 8639203c-d515-11e3-9571-5bf3a74f354f
-    provisioner:
-      chef_omnibus_url: https://raw.github.com/wanelo-chef/chef-bootstrap/master/latest.sh
+verifier:
+  name: inspec
 
 suites:
   - name: circonus-broker
