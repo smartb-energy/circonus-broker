@@ -6,7 +6,7 @@ source_url 'https://github.com/bixu/circonus-broker'
 license          'MIT'
 description      'Installs/Configures the Circonus broker'
 long_description 'Installs/Configures the Circonus broker'
-version          '0.3.3'
+version          '0.3.4'
 
 depends 'yum'
 depends 'ntp'
