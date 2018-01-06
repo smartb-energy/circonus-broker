@@ -1,6 +1,10 @@
 include_recipe 'yum'
 include_recipe 'ntp'
 
+link '/lib64/libpcre.so.0' do
+  to '/lib64/libpcre.so.1'
+end
+
 # Circonus repo:
 yum_repository 'circonus' do
   description "Circonus - Base"
